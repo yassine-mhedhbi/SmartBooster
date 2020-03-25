@@ -29,7 +29,7 @@ public class rocketShip : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             print("foce up");
-            body.AddRelativeForce(Vector3.up * 10);
+            body.AddRelativeForce(Vector3.up *4);
             if (!thrutAudio.isPlaying)
                 thrutAudio.Play();
         }
@@ -40,7 +40,7 @@ public class rocketShip : MonoBehaviour
 
     private void Rotate()
     {
-
+        body.freezeRotation = true;
         if (Input.GetKey(KeyCode.A))
         {
             print("counter clockwise");
@@ -51,5 +51,6 @@ public class rocketShip : MonoBehaviour
             print("clockwise");
             body.transform.Rotate(-Vector3.forward);
         }
+        body.freezeRotation = false;
     }
 }
