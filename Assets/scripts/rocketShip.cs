@@ -5,8 +5,12 @@ using UnityEngine;
 
 public class rocketShip : MonoBehaviour
 {
+    [SerializeField] float rcs = 300f;
+    [SerializeField] float thrust = 4f;
+
     Rigidbody body;
     AudioSource thrutAudio;
+
     bool playThrsut;
     // Start is called before the first frame update
     void Start()
@@ -29,7 +33,7 @@ public class rocketShip : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             print("foce up");
-            body.AddRelativeForce(Vector3.up *4);
+            body.AddRelativeForce(Vector3.up *thrust);
             if (!thrutAudio.isPlaying)
                 thrutAudio.Play();
         }
@@ -40,16 +44,15 @@ public class rocketShip : MonoBehaviour
 
     private void Rotate()
     {
+        float rotation = rcs * Time.deltaTime;
         body.freezeRotation = true;
         if (Input.GetKey(KeyCode.A))
-        {
-            print("counter clockwise");
-            body.transform.Rotate(Vector3.forward);
+        {   
+            body.transform.Rotate(Vector3.forward * rotation);
         }
         else if (Input.GetKey(KeyCode.D)) 
         {
-            print("clockwise");
-            body.transform.Rotate(-Vector3.forward);
+            body.transform.Rotate(-Vector3.forward * rotation);
         }
         body.freezeRotation = false;
     }
