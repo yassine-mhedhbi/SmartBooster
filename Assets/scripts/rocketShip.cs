@@ -25,28 +25,13 @@ public class rocketShip : MonoBehaviour
 
     private void ProcessInput()
     {
-        bool prev = playThrsut; 
         if (Input.GetKey(KeyCode.Space))
         {
             print("foce up");
             body.AddRelativeForce(Vector3.up * 10);
-            prev = playThrsut;
-            playThrsut = true;
+            if (!thrutAudio.isPlaying)
+                thrutAudio.Play();
         }
-        else 
-        {
-            playThrsut = false;
-        }
-
-        if (playThrsut && playThrsut != prev)
-        {
-            thrutAudio.Play();
-        }
-        else if (!playThrsut)
-        {
-            thrutAudio.Stop();
-        }
-
         if (Input.GetKey(KeyCode.A))
         {
             print("left");
