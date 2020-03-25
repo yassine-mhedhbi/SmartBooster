@@ -25,5 +25,16 @@ public class rocketShip : MonoBehaviour
             print("foce up");
             body.AddRelativeForce(Vector3.up * 10);
         }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            print("left");
+            body.transform.Rotate(Vector3.forward);
+        }
+        else if (Input.GetKey(KeyCode.D)) 
+        {
+            print("Right");
+            body.transform.Rotate(-Vector3.forward);
+        }
     }
 }
