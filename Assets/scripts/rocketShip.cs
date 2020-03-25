@@ -32,6 +32,10 @@ public class rocketShip : MonoBehaviour
             if (!thrutAudio.isPlaying)
                 thrutAudio.Play();
         }
+        else
+            thrutAudio.Stop();
+
+
         if (Input.GetKey(KeyCode.A))
         {
             print("left");
