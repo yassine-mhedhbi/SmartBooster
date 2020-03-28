@@ -11,5 +11,5 @@ An agent to master the game
 > In progress
 
 
-** COVID-19 lockdown project**  
+**COVID-19 lockdown project**  
 
