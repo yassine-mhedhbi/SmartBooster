@@ -542,15 +542,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 776462385, guid: 82ec64a1568f43c1da2a490f86e07c3f, type: 3}
       propertyPath: m_Drag
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 776462385, guid: 82ec64a1568f43c1da2a490f86e07c3f, type: 3}
       propertyPath: m_Mass
-      value: 100
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 776462386, guid: 82ec64a1568f43c1da2a490f86e07c3f, type: 3}
       propertyPath: thrust
-      value: 25000
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 4289024730584713494, guid: 82ec64a1568f43c1da2a490f86e07c3f,
         type: 3}

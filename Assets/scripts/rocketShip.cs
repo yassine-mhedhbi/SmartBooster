@@ -28,6 +28,20 @@ public class rocketShip : MonoBehaviour
         Rotate();
     }
 
+    void OnCollisionEnter(Collision coll)
+    {
+        switch(coll.gameObject.tag)
+        {
+            case "friendly":
+                print("alive");//todo update
+                break;
+            default:
+                print("Dead");//todo upate
+                break;
+
+        }
+    }
+
     private void Thrust()
     {
         if (Input.GetKey(KeyCode.Space))
@@ -46,11 +60,11 @@ public class rocketShip : MonoBehaviour
     {
         float rotation = rcs * Time.deltaTime;
         body.freezeRotation = true;
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {   
             body.transform.Rotate(Vector3.forward * rotation);
         }
-        else if (Input.GetKey(KeyCode.D)) 
+        else if (Input.GetKey(KeyCode.RightArrow)) 
         {
             body.transform.Rotate(-Vector3.forward * rotation);
         }
