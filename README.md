@@ -1,4 +1,4 @@
-## Mech Boost
+## Smart Booster
 
 Smart Booster is an agent that can master the 3d [boost](Boost) game developed in unity.
 
